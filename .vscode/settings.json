@@ -1,0 +1,3 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/meal-planner-server/venv/Scripts/python.exe"
+}
