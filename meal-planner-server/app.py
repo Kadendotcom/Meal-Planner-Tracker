@@ -3,7 +3,7 @@ from flask_cors import CORS
 app = flask.Flask(__name__)
 CORS(app)
 
-@app.route('/hello')
+@app.route('/Meals')
 def hello():
     return flask.jsonify(message='Hello from flask')
 

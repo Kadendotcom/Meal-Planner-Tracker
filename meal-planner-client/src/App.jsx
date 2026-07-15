@@ -1,12 +1,19 @@
-import { useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 
+function App() {
 
-function App(){
-  var func= useState(null)
-  useEffect(func,[])
-  var prom= fetch('http://localhost:5000/hello') 
-  prom.then(response=> response.json).then(data=> message)
-  return <h1>Hello World</h1>;
+  const [ingredient, setIngredient] = useState('');
+
+  function handleSubmit(e) {
+    e.preventDefault();
+  }
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input value={ingredient} onChange={e => setIngredient(e.target.value)}/>
+      <button type="submit">Search</button>
+    </form>
+  );
 }
 export default App;
