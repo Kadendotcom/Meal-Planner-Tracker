@@ -14,7 +14,7 @@ function App() {
   }
 
   return (
-    <>
+    <div className="App">
     <form onSubmit={handleSubmit}>
       <input value={ingredient} onChange={e => setIngredient(e.target.value)}/>
       <button type="submit">Search</button>
@@ -22,12 +22,13 @@ function App() {
     <ul>
       {meals.map(meal => (
         <li key = {meal.idMeal}>
-          <img src={meal.strMealThumb} alt={meal.strMeal}/> 
+          
+          <img className="meal-thumb" src={meal.strMealThumb} alt={meal.strMeal}/> 
           {meal.strMeal}
           </li>
       ))}
     </ul>
-    </>
+    </div>
   );
 }
 export default App;
