@@ -5,7 +5,8 @@ CORS(app)
 
 @app.route('/Meals')
 def hello():
-    return flask.jsonify(message='Hello from flask')
+    ingredient = flask.request.args.get('ingredient', '')
+    return flask.jsonify(message=f'Searching for {ingredient}')
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)      

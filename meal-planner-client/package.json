@@ -16,6 +16,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "server": "cd ../meal-planner-server && venv\\Scripts\\python.exe app.py",
+    "dev": "concurrently \"npm run server\" \"npm run start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -37,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.3"
   }
 }

@@ -5,8 +5,11 @@ function App() {
 
   const [ingredient, setIngredient] = useState('');
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
+    const res = await fetch(`http://localhost:5000/Meals?ingredient=${encodeURIComponent(ingredient)}`);
+    const data = await res.json();
+    console.log(data);
   }
 
   return (
@@ -17,3 +20,4 @@ function App() {
   );
 }
 export default App;
+  
