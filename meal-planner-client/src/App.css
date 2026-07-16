@@ -46,6 +46,9 @@ ul{
     gap: 10px;
     margin-bottom: 20px;
   }
+.search-form{
+  align-self: flex-start;
+}
 
 
 @keyframes App-logo-spin {
