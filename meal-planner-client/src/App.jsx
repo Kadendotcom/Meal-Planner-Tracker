@@ -25,9 +25,8 @@ function App() {
       <p>No meals found</p>
     ) : (
       <ul>
-        {meals.map(meal => (
-          <li key = {meal.idMeal}>
-
+        {meals.map((meal, index) => (
+          <li key = {meal.idMeal} style={{animationDelay: `${index * 80}ms`}}>
             <img className="meal-thumb" src={meal.strMealThumb} alt={meal.strMeal}/>
             {meal.strMeal}
             </li>
