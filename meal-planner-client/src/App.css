@@ -51,7 +51,7 @@
   
 }
 ul{
-    list-style-type: disc;
+    list-style-type: circle;
     padding: 0;
   }
 
@@ -63,7 +63,6 @@ ul{
     margin-bottom: 20px;
     align-items: center;
     animation-timing-function: ease-out;
-   
   }
 .search-form{
   align-self: flex-start;

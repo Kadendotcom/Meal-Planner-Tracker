@@ -28,7 +28,14 @@ function App() {
         {meals.map((meal, index) => (
           <li key = {meal.idMeal} style={{animationDelay: `${index * 80}ms`}}>
             <img className="meal-thumb" src={meal.strMealThumb} alt={meal.strMeal}/>
-            {meal.strMeal}
+            <a 
+            className="meal-link"
+            href={`https://www.themealdb.com/meal/${meal.idMeal}`}
+            target='_blank'
+            rel="noopener noreferrer"
+            >
+              {"Recipe: "+meal.strMeal}
+            </a>
             </li>
         ))}
       </ul>
